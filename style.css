@@ -1,0 +1,394 @@
+div{
+    box-sizing: border-box;
+}
+h1, h2, p, ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body{
+    margin: 0;
+}
+.bar1{
+    box-shadow: 1px 1px 5px 0 gray;
+    background-color: whitesmoke;
+}
+.menu-bar ul li{
+    float: left;
+}
+.menu-bar ul:nth-child(2){
+    float: right;
+}
+.menu-bar ul li a{
+    display: block;
+    padding: 15px;
+    font-weight: 500;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+}
+.menu-bar ul li a:hover{
+    color: hotpink;
+}
+.menu-bar ul li.btnMenu{
+    display: none;
+}
+.slide-container{
+    height: 500px;
+    background-color: dimgray;
+    padding: 0;
+    position: relative;
+    transition: 0.5s;
+}
+.slide-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide-container:hover img{
+    transform: scale(1.002);
+}
+.btnslide{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.521);
+    color: black;
+    top: 50%;
+    padding: 7px 13px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transform: translate(0,-50%);
+}
+.btnright{
+    right: 20px;
+}
+.btnleft{
+    left: 20px;
+}
+.cate-box{
+    height: 300px;
+    margin-top: 10px;
+}
+.cate-box .box{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: blue;
+    overflow: hidden;
+    position: relative;
+}
+.cate-box .box h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(245, 245, 245, 0.596);
+    transform: translate(-50%,-50%);
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.cate-box .box h2:hover{
+    background-color: rgba(255, 166, 0, 0.541);
+}
+.cate-box .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+.cate-box .box:hover img{
+    transform: scale(1.1);
+}
+.header-title{
+    margin-top: 10px;
+    text-align: center;
+}
+.header-title h1{
+    font-size: 24px;
+}
+.item-box{
+    height: 350px;
+    padding: 5px;
+    margin-top: 8px;
+}
+.item-box .box{
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+.item-box .box .img-box{
+    width: 100%;
+    height: 58%;
+    float: left;
+    background-color: tomato;
+    position: relative;
+}
+.item-box .box .img-box p{
+    position: absolute;
+    background-color: rgba(0, 128, 128, 0.758);
+    color: white;
+    font-size: 12px;
+    padding: 5px 8px;
+    cursor: pointer;
+    top: 2px;
+    left: 2px;
+    border-radius: 3px;
+}
+.item-box .box .img-box .code-box{
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    background-color: rgba(255, 105, 180, 0.726);
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 12px;
+}
+.item-box .box .img-box .face-icon{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    top: 1px;
+    right: 1px;
+    border-radius: 50%;
+    background-color: rgba(73, 73, 222, 0.845);
+    color: white;
+    padding: 5px;
+    opacity: 0;
+    transition: 0.4s;
+}
+.item-box .box:hover .face-icon{
+    opacity: 1;
+}
+.img-box .face-icon{
+    position: relative;
+    /* display: inline-block;*/
+}
+.img-box .face-icon .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(255, 105, 180, 0.612);
+    color: #fff;
+    text-align: center;
+    padding: 3px 0;
+    border-radius: 6px;
+    left: -90px;
+    top: 40px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+.img-box .face-icon:hover .tooltiptext {
+    visibility: visible;
+}
+.img-box .face-icon .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 90%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 105, 180, 0.612) transparent;
+}
+.item-box .box .txt-box{
+    width: 100%;
+    height: 42%;
+    float: left;
+    text-align: center;
+    padding: 0.5px;
+    position: relative;
+}
+.item-box .box .txt-box p{
+    font-size: 13px;
+}
+.item-box .box .txt-box h1{
+    font-size: 14px;
+    color: green;
+    padding: 2px;
+}
+.item-box .box .txt-box h1 span{
+    color: red;
+    /* text-decoration: line-through; */
+}
+.item-box .box .txt-box ul li{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    /* background-color: black; */
+    margin-top: 5px;
+    border-radius: 3px;
+}
+.item-box .box .txt-box ul li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item-box .box .txt-box ul li:hover img{
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.item-box .box .txt-box .btnCart{
+    position: absolute;
+    background-color: crimson;
+    padding: 7px;
+    font-size: 11px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    color: white;
+    border-radius: 3px;
+}
+.item-box .box .txt-box a{
+    text-decoration: none;
+}
+.item-box .box .txt-box a:hover{
+    color: yellow;
+}
+
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px){
+
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .menu-bar ul li a{
+        font-size: 14px;
+        padding: 13px;
+    }
+    .cate-box{
+        height: 275px;
+    }
+    .myContainer{
+        max-width: 95%;
+    }
+    .item-box .box .img-box{
+        height: 55%;
+    }
+    .item-box .box .txt-box{
+        height: 45%;
+    }
+    .item-box .box .txt-box p{
+        font-size: 12px;
+    }
+    .item-box .box .txt-box ul li{
+        width: 35px;
+        height: 35px;
+    }
+    .item-box .box .txt-box .btnCart{
+        padding: 7px;
+        font-size: 10px;
+        margin: 0;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .menu-bar ul:nth-child(1) li:not(.btnMenu){
+        display: none;
+    }
+    .menu-bar ul li.btnMenu{
+        display: block;
+    }
+    .slide-container{
+        height: 400px; 
+    }
+    .cate-box{
+        height: 250px;
+    }
+    .myContainer{
+        max-width: 90%;
+    }
+    .item-box .box .img-box{
+        height: 55%;
+    }
+    .item-box .box .txt-box{
+        height: 45%;
+    }
+    .item-box .box .txt-box p{
+        font-size: 12px;
+    }
+    .item-box .box .txt-box ul li{
+        width: 40px;
+        height: 40px;
+    }
+    .item-box .box .txt-box .btnCart{
+        padding: 7px 8px;
+        font-size: 10px;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px){
+    .menu-bar ul:nth-child(1) li:not(.btnMenu){
+        display: none;
+    }
+    .menu-bar ul li.btnMenu{
+        display: block;
+    }
+    .slide-container{
+        height: 300px; 
+    }
+    .cate-box{
+        height: 250px;
+    }
+    .header-title h1{
+        font-size: 18px;
+    }
+    .header-title p{
+        font-size: 14px;
+    }
+    .myContainer{
+        max-width: 90%;
+    }
+    .item-box .box .txt-box ul li{
+        width: 35px;
+        height: 35px;
+    }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px){
+    .menu-bar ul:nth-child(1) li:not(.btnMenu){
+        display: none;
+    }
+    .menu-bar ul li.btnMenu{
+        display: block;
+    }
+    .menu-bar ul li a{
+        padding: 11px;
+        font-size: 13px;
+    }
+    .slide-container{
+        height: 250px; 
+    }
+    .btnslide{
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    .cate-box{
+        height: 200px;
+        padding: 4px;
+        margin-top: 1px;
+    }
+    .header-title h1{
+        font-size: 16px;
+    }
+    .header-title p{
+        font-size: 13px;
+    }
+    .item-box .box .txt-box .btnCart{
+        padding: 7px 8px;
+        font-size: 10px;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+}
